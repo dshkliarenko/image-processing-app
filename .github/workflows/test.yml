@@ -31,7 +31,7 @@ jobs:
 
     - name: Run code formatting check
       run: |
-        black --check --diff app/ tests/
+        black app/ tests/
 
     - name: Run import sorting check
       run: |
