@@ -1,6 +1,8 @@
+from io import BytesIO
+
 import pytest
 import pytest_asyncio
-from io import BytesIO
+
 
 class TestAPIEndpoints:
     """Test API endpoint functionality"""

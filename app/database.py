@@ -1,9 +1,11 @@
-import os
-from pymongo import AsyncMongoClient, IndexModel, ASCENDING
 import hashlib
-from typing import Optional, Dict, Any
-from datetime import datetime
 import json
+import os
+from datetime import datetime
+from typing import Any, Dict, Optional
+
+from pymongo import ASCENDING, AsyncMongoClient, IndexModel
+
 
 class Database:
     client: Optional[AsyncMongoClient] = None

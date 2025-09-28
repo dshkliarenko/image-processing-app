@@ -1,7 +1,9 @@
-import pytest
-from app.database import calculate_image_hash
 import cv2
 import numpy as np
+import pytest
+
+from app.database import calculate_image_hash
+
 
 class TestImageHashing:
     """Test image hashing functionality"""

@@ -1,22 +1,23 @@
-from fastapi import FastAPI, File, UploadFile, HTTPException, BackgroundTasks
-from fastapi.responses import JSONResponse
-import uvicorn
 import os
-import time
 import tempfile
-from datetime import datetime
+import time
 from contextlib import asynccontextmanager
+from datetime import datetime
+
+import uvicorn
+from fastapi import BackgroundTasks, FastAPI, File, HTTPException, UploadFile
+from fastapi.responses import JSONResponse
 
 from .database import (
-    connect_to_mongo,
+    calculate_image_hash,
     close_mongo_connection,
+    connect_to_mongo,
     get_cached_result,
-    save_processing_result,
     log_request,
-    calculate_image_hash
+    save_processing_result,
 )
-from .models import ProcessImageResponse, StatusResponse, ErrorResponse
 from .feature_detector import FeatureDetector
+from .models import ErrorResponse, ProcessImageResponse, StatusResponse
 
 # Global detector instance
 detector = FeatureDetector()
