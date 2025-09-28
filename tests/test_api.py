@@ -1,7 +1,6 @@
 from io import BytesIO
 
 import pytest
-import pytest_asyncio
 
 
 class TestAPIEndpoints:
